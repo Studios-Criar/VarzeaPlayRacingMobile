@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b9f344499750e3b419bae97f53636676
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scripts/Utility/SmoothFollow2.cs
+  uploadId: 726426

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: ac96f5c0b697340a887ac2bd77a0bddc
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/Projectors/Sources/Shaders/Projector Multiply.shader
+  uploadId: 726426

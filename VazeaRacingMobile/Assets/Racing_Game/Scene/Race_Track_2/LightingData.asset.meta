@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 76f4dcc9dd88d39449508b9d4d79b3b4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scene/Race_Track_2/LightingData.asset
+  uploadId: 726426

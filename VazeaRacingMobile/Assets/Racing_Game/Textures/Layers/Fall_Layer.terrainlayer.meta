@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0213f7fde81910a46b8b8a3bee6edb7e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Textures/Layers/Fall_Layer.terrainlayer
+  uploadId: 726426

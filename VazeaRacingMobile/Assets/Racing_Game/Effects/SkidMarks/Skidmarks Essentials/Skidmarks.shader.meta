@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1d5e5936aac2ee545ade1ec1cda3262f
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/SkidMarks/Skidmarks Essentials/Skidmarks.shader
+  uploadId: 726426

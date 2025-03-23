@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 273404942eede4ea1883ca1fb2942507
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/PostEffects/Effects/ImageEffects/Shaders/ContrastComposite.shader
+  uploadId: 726426

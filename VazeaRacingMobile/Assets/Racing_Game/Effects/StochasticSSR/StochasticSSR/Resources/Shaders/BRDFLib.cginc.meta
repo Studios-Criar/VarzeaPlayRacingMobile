@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bfe178944d066f54a902aaf0affcf5cc
+timeCreated: 1466937279
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/StochasticSSR/StochasticSSR/Resources/Shaders/BRDFLib.cginc
+  uploadId: 726426

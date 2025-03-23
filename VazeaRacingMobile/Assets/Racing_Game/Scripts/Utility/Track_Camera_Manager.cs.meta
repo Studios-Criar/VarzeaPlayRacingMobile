@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8ccb238869c4c1846ac90adece68b7dc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scripts/Utility/Track_Camera_Manager.cs
+  uploadId: 726426

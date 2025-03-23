@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 03587dedd53633043892e130d1863838
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Materials/Triggers/Road_Blocker.mat
+  uploadId: 726426

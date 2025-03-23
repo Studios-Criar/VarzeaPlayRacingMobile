@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: ade08000c26508d4fbefff1aaecd2ff6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scripts/AI/Car_Position.cs
+  uploadId: 726426

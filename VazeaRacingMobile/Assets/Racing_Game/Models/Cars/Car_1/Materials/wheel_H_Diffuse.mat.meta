@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6404a888a05c22f459c5f64c6d0bfdc2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Models/Cars/Car_1/Materials/wheel_H_Diffuse.mat
+  uploadId: 726426

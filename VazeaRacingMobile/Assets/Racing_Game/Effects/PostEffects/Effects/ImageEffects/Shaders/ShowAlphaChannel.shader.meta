@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: da310021e2a4142429d95c537846dc38
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/PostEffects/Effects/ImageEffects/Shaders/ShowAlphaChannel.shader
+  uploadId: 726426

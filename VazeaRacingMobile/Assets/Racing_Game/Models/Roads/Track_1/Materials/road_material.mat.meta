@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d8279224d71d47c4d9f07c4b1d7d58db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Models/Roads/Track_1/Materials/road_material.mat
+  uploadId: 726426

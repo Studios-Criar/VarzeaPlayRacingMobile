@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e51b3120951853e40bd1135de6de0ea4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Settings/Global Volume Profile.asset
+  uploadId: 726426

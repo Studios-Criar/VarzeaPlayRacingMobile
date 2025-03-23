@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c20d5e65a67fdb14a887f6efd846f081
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Prefabs/Manager/Camera_Parent.prefab
+  uploadId: 726426

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d7a51d0bf6c92e145995eaf8590a3300
+timeCreated: 1476297253
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/Lens Flare/Front_Light.flare
+  uploadId: 726426

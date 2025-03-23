@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 28742fe2cb53c6f4587f7e363d6ce082
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Models/RaceTrack/Stadium/Stadium_2/Materials/STD_Light.mat
+  uploadId: 726426

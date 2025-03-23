@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 571aff5d2a0b93b47998cb7209f9c581
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Prefabs/Triggers/Road_Blockers.prefab
+  uploadId: 726426

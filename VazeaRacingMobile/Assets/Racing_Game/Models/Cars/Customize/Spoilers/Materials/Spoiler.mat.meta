@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c02b6b03974f11d49bbb33ff10d1f964
+timeCreated: 1486144374
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Models/Cars/Customize/Spoilers/Materials/Spoiler.mat
+  uploadId: 726426

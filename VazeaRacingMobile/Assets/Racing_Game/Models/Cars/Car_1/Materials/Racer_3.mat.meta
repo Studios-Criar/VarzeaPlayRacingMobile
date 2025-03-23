@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b4a1e5f49f8b0ad4b967c20f51805080
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Models/Cars/Car_1/Materials/Racer_3.mat
+  uploadId: 726426

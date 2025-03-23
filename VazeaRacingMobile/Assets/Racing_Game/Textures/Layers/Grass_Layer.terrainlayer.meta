@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6a9c19c5d26e8c42911cb795fe2681f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Textures/Layers/Grass_Layer.terrainlayer
+  uploadId: 726426

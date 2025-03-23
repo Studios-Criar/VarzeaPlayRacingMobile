@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1070005fa75eb0242b44b18f29e5590e
+timeCreated: 1475695454
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/Particle/WheelSmoke.prefab
+  uploadId: 726426

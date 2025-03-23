@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 232961ab4aa1cf64db418cf6ff0c8f93
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Prefabs/Cars/Racer/Racer_4.prefab
+  uploadId: 726426

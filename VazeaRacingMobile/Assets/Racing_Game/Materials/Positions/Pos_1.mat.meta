@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8d793d6f69377a6409cce2cba5a67cb5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Materials/Positions/Pos_1.mat
+  uploadId: 726426

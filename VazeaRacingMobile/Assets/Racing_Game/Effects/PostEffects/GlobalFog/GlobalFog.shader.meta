@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8deace52139596940b7802d4310e1d76
+timeCreated: 1503347140
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/PostEffects/GlobalFog/GlobalFog.shader
+  uploadId: 726426

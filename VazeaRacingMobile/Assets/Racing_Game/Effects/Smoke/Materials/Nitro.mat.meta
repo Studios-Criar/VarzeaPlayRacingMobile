@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2c9b9fdd2b918984b958a456a0ce0fa1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/Smoke/Materials/Nitro.mat
+  uploadId: 726426

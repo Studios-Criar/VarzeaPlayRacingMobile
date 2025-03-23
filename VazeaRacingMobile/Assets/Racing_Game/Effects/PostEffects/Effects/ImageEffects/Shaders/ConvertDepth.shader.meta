@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 14768d3865b1342e3a861fbe19ba2db2
+ShaderImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/PostEffects/Effects/ImageEffects/Shaders/ConvertDepth.shader
+  uploadId: 726426

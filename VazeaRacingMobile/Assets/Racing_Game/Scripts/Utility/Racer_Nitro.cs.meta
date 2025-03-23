@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1c2650bc18803364cb6cbbf92ee8c986
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scripts/Utility/Racer_Nitro.cs
+  uploadId: 726426

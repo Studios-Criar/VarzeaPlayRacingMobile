@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1beb02cc2bb81b84d81d84661f07284a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Models/Lights/Light1/Materials/Light.mat
+  uploadId: 726426

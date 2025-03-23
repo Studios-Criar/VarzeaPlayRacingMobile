@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 844c251e3e8430543afe1716924c90ec
+timeCreated: 1485167333
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/Lens Flare/Flash_Light.flare
+  uploadId: 726426

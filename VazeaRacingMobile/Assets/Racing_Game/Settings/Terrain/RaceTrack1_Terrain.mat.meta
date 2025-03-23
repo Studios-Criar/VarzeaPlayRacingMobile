@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 14ec04c60064fb443b161d879b470216
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Settings/Terrain/RaceTrack1_Terrain.mat
+  uploadId: 726426

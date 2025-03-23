@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2f3ff3cad9c7e8044a01d79e175a8846
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scripts/Utility/RPM.cs
+  uploadId: 726426

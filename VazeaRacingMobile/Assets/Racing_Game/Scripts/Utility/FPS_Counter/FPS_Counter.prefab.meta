@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 01e60bc11fc628d47a170c6574c5b52f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Scripts/Utility/FPS_Counter/FPS_Counter.prefab
+  uploadId: 726426

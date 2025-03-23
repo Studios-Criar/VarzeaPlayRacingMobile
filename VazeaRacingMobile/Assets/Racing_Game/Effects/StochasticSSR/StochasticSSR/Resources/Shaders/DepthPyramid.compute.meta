@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1948dd6f0d98bcd46966ed67aa4b076f
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 4
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/StochasticSSR/StochasticSSR/Resources/Shaders/DepthPyramid.compute
+  uploadId: 726426

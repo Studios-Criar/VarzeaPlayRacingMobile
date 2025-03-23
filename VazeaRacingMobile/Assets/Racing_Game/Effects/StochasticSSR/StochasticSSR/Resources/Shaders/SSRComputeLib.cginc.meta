@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 400a56e398050374092dce07574304cb
+timeCreated: 1522436254
+licenseType: Store
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Effects/StochasticSSR/StochasticSSR/Resources/Shaders/SSRComputeLib.cginc
+  uploadId: 726426

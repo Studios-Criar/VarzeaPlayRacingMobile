@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ea1470ac8afb4814ba72320e54e83831
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 13400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291061
+  packageName: Racing Game Creator 2
+  packageVersion: 2.5
+  assetPath: Assets/Racing_Game/Settings/PhysicsMaterial/Car.physicMaterial
+  uploadId: 726426
