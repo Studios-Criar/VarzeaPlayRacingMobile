@@ -11564,10 +11564,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7208739032426208967}
-  - {fileID: 7589229941509708061}
-  - {fileID: 4996930114017641203}
-  - {fileID: 5636230189393081392}
   - {fileID: 2689615358194963754}
   - {fileID: 4312619685888135887}
   - {fileID: 3420830036118956929}
@@ -19718,7 +19714,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7208739032426208967}
-  - component: {fileID: 2532380932875629413}
   - component: {fileID: 2599616182133777543}
   m_Layer: 0
   m_Name: Projector Roof
@@ -19736,24 +19731,12 @@ Transform:
   m_GameObject: {fileID: 4217747013340148202}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 0.648, z: -0.017}
-  m_LocalScale: {x: 0.256141, y: 0.256141, z: 0.256141}
+  m_LocalPosition: {x: 0.32624304, y: 1.1041856, z: -0.039324857}
+  m_LocalScale: {x: 0.27030918, y: 0.27030918, z: 0.27030918}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2717864438533805383}
+  m_Father: {fileID: 7722960447910288920}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!114 &2532380932875629413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4217747013340148202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2599616182133777543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19787,7 +19770,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 186638
+  instanceID: 137066
 --- !u!1 &4363990708894273369
 GameObject:
   m_ObjectHideFlags: 0
@@ -31184,7 +31167,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5636230189393081392}
-  - component: {fileID: 2389450585745515078}
   - component: {fileID: 3042353446681237460}
   m_Layer: 0
   m_Name: Projector Left Door
@@ -31202,24 +31184,12 @@ Transform:
   m_GameObject: {fileID: 6221160238014327006}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.058, y: -0.041, z: -0.775}
-  m_LocalScale: {x: 0.52941, y: 0.52941, z: 0.52941}
+  m_LocalPosition: {x: -0.79027915, y: 0.37707427, z: -0.8392528}
+  m_LocalScale: {x: 0.55869377, y: 0.5586938, z: 0.55869377}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2717864438533805383}
+  m_Father: {fileID: 7722960447910288920}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2389450585745515078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6221160238014327006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3042353446681237460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31253,7 +31223,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 186700
+  instanceID: 137126
 --- !u!1 &6501890565752926596
 GameObject:
   m_ObjectHideFlags: 0
@@ -31831,6 +31801,8 @@ GameObject:
   - component: {fileID: 8891894847612020087}
   - component: {fileID: 5106071876366596160}
   - component: {fileID: 8047752363056111682}
+  - component: {fileID: 2497131412043643874}
+  - component: {fileID: 2521704628894979356}
   m_Layer: 2
   m_Name: Mac_3
   m_TagString: Untagged
@@ -31850,7 +31822,11 @@ Transform:
   m_LocalPosition: {x: -0.61191475, y: 0.16334216, z: -1.0402349}
   m_LocalScale: {x: 2.0103989, y: 2.0103989, z: 2.0103989}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7208739032426208967}
+  - {fileID: 7589229941509708061}
+  - {fileID: 4996930114017641203}
+  - {fileID: 5636230189393081392}
   m_Father: {fileID: 2689615358194963754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6666079554292584893
@@ -31920,7 +31896,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6946423302460392610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa186ad27f02f2d47809a378671f1b0b, type: 3}
   m_Name: 
@@ -31961,6 +31937,37 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -416253003525793337, guid: f6ebaa94097f3da47a01d47be07f26f3, type: 3}
+--- !u!114 &2497131412043643874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946423302460392610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  projectionRenderers:
+  - {fileID: 2599616182133777543}
+  - {fileID: 298383455837588100}
+  - {fileID: 4139189308083468729}
+  - {fileID: 3042353446681237460}
+--- !u!114 &2521704628894979356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946423302460392610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448717ca547c4417b0f767ce2d173b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 2
 --- !u!1 &6964189601857310579
 GameObject:
   m_ObjectHideFlags: 0
@@ -41945,7 +41952,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4996930114017641203}
-  - component: {fileID: 1373992562592991229}
   - component: {fileID: 4139189308083468729}
   m_Layer: 0
   m_Name: Projector Right Door
@@ -41963,24 +41969,12 @@ Transform:
   m_GameObject: {fileID: 7685566338253283841}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.058, y: -0.041, z: -0.775}
-  m_LocalScale: {x: 0.52941, y: 0.52941, z: 0.52941}
+  m_LocalPosition: {x: 1.4427654, y: 0.37707427, z: -0.8392528}
+  m_LocalScale: {x: 0.55869377, y: 0.5586938, z: 0.55869377}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2717864438533805383}
+  m_Father: {fileID: 7722960447910288920}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1373992562592991229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7685566338253283841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4139189308083468729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42014,7 +42008,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 186804
+  instanceID: 137230
 --- !u!1 &7881749965881188162
 GameObject:
   m_ObjectHideFlags: 0
@@ -42340,7 +42334,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7589229941509708061}
-  - component: {fileID: 2678373038494224529}
   - component: {fileID: 298383455837588100}
   m_Layer: 0
   m_Name: Projector Hood
@@ -42358,24 +42351,12 @@ Transform:
   m_GameObject: {fileID: 8451502783025204695}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: -0.06, z: 2.104}
-  m_LocalScale: {x: 0.22281383, y: 0.22281383, z: 0.22281383}
+  m_LocalPosition: {x: 0.32624304, y: 0.3570233, z: 2.1989963}
+  m_LocalScale: {x: 0.23513857, y: 0.23513855, z: 0.23513855}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2717864438533805383}
+  m_Father: {fileID: 7722960447910288920}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!114 &2678373038494224529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8451502783025204695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &298383455837588100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42409,7 +42390,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 186364
+  instanceID: 136794
 --- !u!1 &8461170806575793029
 GameObject:
   m_ObjectHideFlags: 0

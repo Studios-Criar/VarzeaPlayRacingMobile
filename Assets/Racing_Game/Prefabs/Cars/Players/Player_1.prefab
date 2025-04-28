@@ -10157,7 +10157,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071913863989539755}
-  - component: {fileID: 2410163777818973490}
   - component: {fileID: 1837875168492327370}
   m_Layer: 0
   m_Name: Projector Left Door
@@ -10181,18 +10180,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4902973806280590640}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2410163777818973490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346718124662745076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1837875168492327370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10226,7 +10213,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 101680
+  instanceID: 108954
 --- !u!1 &407728867406292786
 GameObject:
   m_ObjectHideFlags: 0
@@ -10301,7 +10288,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3105143448691253448}
-  - component: {fileID: 4185343485110025683}
   - component: {fileID: 2625755393336529994}
   m_Layer: 0
   m_Name: Projector Hood
@@ -10325,18 +10311,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4902973806280590640}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!114 &4185343485110025683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438308649945508010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2625755393336529994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10370,7 +10344,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 101750
+  instanceID: 109024
 --- !u!1 &471793239362093377
 GameObject:
   m_ObjectHideFlags: 0
@@ -29637,7 +29611,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6515831737350639982}
-  - component: {fileID: 8658415754489133579}
   - component: {fileID: 3973302801147341967}
   m_Layer: 0
   m_Name: Projector Roof
@@ -29661,18 +29634,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4902973806280590640}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!114 &8658415754489133579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4852528799636838280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3973302801147341967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29706,7 +29667,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 101928
+  instanceID: 109202
 --- !u!1 &4901997562148569496
 GameObject:
   m_ObjectHideFlags: 0
@@ -29720,6 +29681,8 @@ GameObject:
   - component: {fileID: 4923946418645964226}
   - component: {fileID: 4334906927829153049}
   - component: {fileID: 7120660119467826164}
+  - component: {fileID: 2313597827297303757}
+  - component: {fileID: 5185433176332300375}
   m_Layer: 2
   m_Name: Body_Mesh
   m_TagString: Untagged
@@ -29830,7 +29793,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4901997562148569496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa186ad27f02f2d47809a378671f1b0b, type: 3}
   m_Name: 
@@ -29849,6 +29812,37 @@ MonoBehaviour:
     rgba: 4278230527
   - serializedVersion: 2
     rgba: 4294945024
+--- !u!114 &2313597827297303757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901997562148569496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  projectionRenderers:
+  - {fileID: 3973302801147341967}
+  - {fileID: 2625755393336529994}
+  - {fileID: 7198350429832352852}
+  - {fileID: 1837875168492327370}
+--- !u!114 &5185433176332300375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901997562148569496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448717ca547c4417b0f767ce2d173b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 0
 --- !u!1 &4999956589637270948
 GameObject:
   m_ObjectHideFlags: 0
@@ -29858,7 +29852,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8682944150442430778}
-  - component: {fileID: 414396151173789915}
   - component: {fileID: 7198350429832352852}
   m_Layer: 0
   m_Name: Projector Right Door
@@ -29882,18 +29875,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4902973806280590640}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &414396151173789915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4999956589637270948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7198350429832352852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29927,7 +29908,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 102242
+  instanceID: 109518
 --- !u!1 &5080119024358663185
 GameObject:
   m_ObjectHideFlags: 0
@@ -52576,7 +52557,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 102068
+  instanceID: 109344
 --- !u!1 &8761270702578500352
 GameObject:
   m_ObjectHideFlags: 0

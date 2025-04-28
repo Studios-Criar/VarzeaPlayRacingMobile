@@ -11,16 +11,16 @@ namespace Networking
     [RequireComponent(typeof(NetworkingManager))]
     public class TextureDownloader : MonoBehaviour
     {
-        [SerializeField] private string baseUrl = "https://varzeaplay.com.br/games/racing/teams/";
+        [SerializeField] private string baseUrl = "https://varzeaplay.com.br/resources/games/racing/teams/";
     
         public static TextureDownloader Instance { get; private set; }
-        public List<Texture2D> TeamTextures => new(_teamTextures.Values);
+        public List<Texture2D> Textures => new(_textures.Values);
         public event Action OnTexturesLoaded;
         
         private static string TextureCacheDirectoryPath => Path.Combine(Application.persistentDataPath, "Cache");
         private static string AssetsFilePath => Path.Combine(Application.persistentDataPath, "assets.json");
 
-        private Dictionary<Uri, Texture2D> _teamTextures;
+        private Dictionary<Uri, Texture2D> _textures;
         private Dictionary<Uri, CachedTexture> _textureCache;
 
         private NetworkingManager _networkingManager;
@@ -141,6 +141,7 @@ namespace Networking
             
             var data = await File.ReadAllBytesAsync(cachedTexture.path);
             var localTexture = new Texture2D(1, 1);
+            localTexture.name = Path.GetFileNameWithoutExtension(uri.LocalPath);
 
             if (localTexture.LoadImage(data, false)) return localTexture;
             
@@ -150,11 +151,11 @@ namespace Networking
 
         private async void LoadTexturesOffline()
         {
-            _teamTextures = new Dictionary<Uri, Texture2D>();
+            _textures = new Dictionary<Uri, Texture2D>();
             
             foreach (var uri in _textureCache.Keys)
             {
-                _teamTextures[uri] = await LoadTextureFromCache(uri);
+                _textures[uri] = await LoadTextureFromCache(uri);
             }
             
             OnTexturesLoaded?.Invoke();
@@ -162,7 +163,7 @@ namespace Networking
 
         private async void LoadTexturesOnline()
         {
-            _teamTextures = new Dictionary<Uri, Texture2D>();
+            _textures = new Dictionary<Uri, Texture2D>();
             
             List<Uri> filesList;
 
@@ -194,11 +195,11 @@ namespace Networking
                 if (remoteTexture == null)
                 {
                     // Debug.Log($"Hit cache: {uri}");
-                    _teamTextures[uri] = await LoadTextureFromCache(uri);
+                    _textures[uri] = await LoadTextureFromCache(uri);
                     continue;
                 }
             
-                _teamTextures[uri] = remoteTexture;
+                _textures[uri] = remoteTexture;
                 remoteTexture.name = Path.GetFileNameWithoutExtension(uri.LocalPath);
                 var path = Path.Combine(TextureCacheDirectoryPath, Path.GetFileName(uri.LocalPath));
                 await File.WriteAllBytesAsync(path, remoteTexture.EncodeToPNG());

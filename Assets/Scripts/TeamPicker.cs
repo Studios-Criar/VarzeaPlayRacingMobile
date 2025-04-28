@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Networking;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,7 +12,8 @@ public class TeamPicker : MonoBehaviour
     [SerializeField] private UnityEvent teamPickerItemEvents;
     
     public static event System.Action<TeamPickerItem> OnTeamPicked;
-    public static TeamPickerItem CurrentTeam { get; private set; }
+    
+    private List<TeamPickerItem> _teamPickerItems = new();
     
     private void OnEnable()
     {
@@ -34,7 +37,7 @@ public class TeamPicker : MonoBehaviour
     {
         var counter = 0;
         
-        foreach (var t in TextureDownloader.Instance.TeamTextures)
+        foreach (var t in TextureDownloader.Instance.Textures)
         {
             var item = Instantiate(teamPickerItemPrefab, layoutGroup.transform);
             item.SetUp(() =>
@@ -43,7 +46,8 @@ public class TeamPicker : MonoBehaviour
                 teamPickerItemEvents?.Invoke();
             }, t);
 
-            if (counter == 0) CurrentTeam = item;
+            _teamPickerItems.Add(item);
+            if (counter == 0) StaticCustomSettings.CurrentTeam = item;
             counter++;
         }
     }
@@ -54,11 +58,14 @@ public class TeamPicker : MonoBehaviour
         {
             Destroy(t.gameObject);
         }
+        
+        _teamPickerItems.Clear();
     }
 
     private void PickTeam(TeamPickerItem teamPickerItem)
     {
-        CurrentTeam = teamPickerItem;
-        OnTeamPicked?.Invoke(CurrentTeam);
+        StaticCustomSettings.CurrentTeam = teamPickerItem;
+        OnTeamPicked?.Invoke(StaticCustomSettings.CurrentTeam);
+        StaticCustomSettings.AvailableTeams = _teamPickerItems.Where(t => t != StaticCustomSettings.CurrentTeam).ToList();
     }
 }

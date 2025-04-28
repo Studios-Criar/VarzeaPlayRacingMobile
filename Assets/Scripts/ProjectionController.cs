@@ -1,45 +1,66 @@
-using System;
 using LlockhamIndustries.Decals;
 using UnityEngine;
 
-[RequireComponent(typeof(ProjectionRenderer))]
 public class ProjectionController : MonoBehaviour
 {
-    private ProjectionRenderer _projectionRenderer;
+    [SerializeField] private bool isPlayer;
+    [SerializeField] private ProjectionRenderer[] projectionRenderers;
+
+    private TeamPickerItem _currentTeam;
 
     private void OnEnable()
     {
-        TeamPicker.OnTeamPicked += UpdateProjection;
+        TeamPicker.OnTeamPicked += OnTeamPicked;
     }
     
     private void OnDisable()
     {
-        TeamPicker.OnTeamPicked -= UpdateProjection;
+        TeamPicker.OnTeamPicked -= OnTeamPicked;
     }
-    
+
+    private void OnDestroy()
+    {
+        StaticCustomSettings.ReleaseTeam(_currentTeam);
+    }
+
     private void Awake()
     {
-        _projectionRenderer = GetComponent<ProjectionRenderer>();
-        _projectionRenderer.Projection = ScriptableObject.CreateInstance<Metallic>();
-        _projectionRenderer.Projection.TransparencyType = TransparencyType.Blend;
-        
-        if (TeamPicker.CurrentTeam) UpdateProjection(TeamPicker.CurrentTeam);
+        foreach (var projectionRenderer in projectionRenderers)
+        {
+            projectionRenderer.Projection = ScriptableObject.CreateInstance<Metallic>();
+            projectionRenderer.Projection.TransparencyType = TransparencyType.Blend;
+        }
+
+        _currentTeam = !isPlayer ? StaticCustomSettings.GetRandomTeam() : StaticCustomSettings.CurrentTeam;
+        UpdateProjection(_currentTeam.Texture);
     }
 
     private void Update()
     {
-        _projectionRenderer.enabled = ((Metallic) _projectionRenderer.Projection).albedo.Texture;
+        foreach (var projectionRenderer in projectionRenderers)
+        {
+            projectionRenderer.enabled = ((Metallic)projectionRenderer.Projection).albedo.Texture;
+        }
     }
 
-    private void UpdateProjection(TeamPickerItem teamPickerItem)
+    private void OnTeamPicked(TeamPickerItem teamPickerItem)
     {
-        var projection = (Metallic) _projectionRenderer.Projection;
-        
-        projection.albedo.Texture = teamPickerItem.Texture;
-        projection.albedo.Color = Color.white;
-        
-        _projectionRenderer.ChangeProjection();
-        _projectionRenderer.UpdateProjection();
-        _projectionRenderer.UpdateProperties();
+        _currentTeam = teamPickerItem;
+        UpdateProjection(teamPickerItem.Texture);
+    }
+
+    private void UpdateProjection(Texture2D texture)
+    {
+        foreach (var projectionRenderer in projectionRenderers)
+        {
+            var projection = (Metallic)projectionRenderer.Projection;
+
+            projection.albedo.Texture = texture;
+            projection.albedo.Color = Color.white;
+
+            projectionRenderer.ChangeProjection();
+            projectionRenderer.UpdateProjection();
+            projectionRenderer.UpdateProperties();
+        }
     }
 }

@@ -10924,7 +10924,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7089370409264500498}
-  - component: {fileID: 8161472686481472371}
   - component: {fileID: 3987268418422333095}
   m_Layer: 0
   m_Name: Projector Hood
@@ -10948,18 +10947,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6616782595447975557}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!114 &8161472686481472371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338650576610271696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3987268418422333095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10993,7 +10980,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 108052
+  instanceID: 134578
 --- !u!1 &1441391789357881455
 GameObject:
   m_ObjectHideFlags: 0
@@ -12523,7 +12510,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5173074015150398032}
-  - component: {fileID: 7931687407878021016}
   - component: {fileID: 7225871409692614721}
   m_Layer: 0
   m_Name: Projector Right Door
@@ -12547,18 +12533,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6616782595447975557}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &7931687407878021016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2457318035480403688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7225871409692614721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12592,7 +12566,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 108376
+  instanceID: 134900
 --- !u!1 &2524531897842739284
 GameObject:
   m_ObjectHideFlags: 0
@@ -18781,7 +18755,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045356963898884135}
-  - component: {fileID: 4279966681697631677}
   - component: {fileID: 5894446834499471244}
   m_Layer: 0
   m_Name: Projector Left Door
@@ -18805,18 +18778,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6616782595447975557}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &4279966681697631677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573964070011236886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5894446834499471244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18850,7 +18811,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 108222
+  instanceID: 134746
 --- !u!1 &3670126741623039588
 GameObject:
   m_ObjectHideFlags: 0
@@ -19697,7 +19658,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4999229424958706286}
-  - component: {fileID: 1052486114862925479}
   - component: {fileID: 5542214059625764547}
   m_Layer: 0
   m_Name: Projector Roof
@@ -19721,18 +19681,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6616782595447975557}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!114 &1052486114862925479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4129758456356852915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5542214059625764547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19766,7 +19714,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 108196
+  instanceID: 134720
 --- !u!1 &4192920156982908482
 GameObject:
   m_ObjectHideFlags: 0
@@ -40809,6 +40757,8 @@ GameObject:
   - component: {fileID: 6596659821821083255}
   - component: {fileID: 1713571108938408714}
   - component: {fileID: 9035619450351860571}
+  - component: {fileID: 8750748317610727138}
+  - component: {fileID: 1583735080845887664}
   m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
@@ -40829,12 +40779,12 @@ Transform:
   m_LocalScale: {x: 2.346704, y: 2.346704, z: 2.346704}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7415704279063886508}
+  - {fileID: 9039440598326415340}
   - {fileID: 4999229424958706286}
   - {fileID: 7089370409264500498}
   - {fileID: 5173074015150398032}
   - {fileID: 1045356963898884135}
-  - {fileID: 7415704279063886508}
-  - {fileID: 9039440598326415340}
   m_Father: {fileID: 2485202886514872942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6604669719240885143
@@ -40919,7 +40869,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6619782147135629869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa186ad27f02f2d47809a378671f1b0b, type: 3}
   m_Name: 
@@ -40938,6 +40888,37 @@ MonoBehaviour:
     rgba: 4278230527
   - serializedVersion: 2
     rgba: 4294945024
+--- !u!114 &8750748317610727138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6619782147135629869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  projectionRenderers:
+  - {fileID: 5542214059625764547}
+  - {fileID: 3987268418422333095}
+  - {fileID: 7225871409692614721}
+  - {fileID: 5894446834499471244}
+--- !u!114 &1583735080845887664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6619782147135629869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 448717ca547c4417b0f767ce2d173b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialIndex: 0
 --- !u!1 &6641448811310311539
 GameObject:
   m_ObjectHideFlags: 0
@@ -47827,7 +47808,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 107996
+  instanceID: 134522
 --- !u!1 &8944047366600338949
 GameObject:
   m_ObjectHideFlags: 0
