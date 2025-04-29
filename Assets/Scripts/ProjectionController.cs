@@ -6,7 +6,7 @@ public class ProjectionController : MonoBehaviour
     [SerializeField] private bool isPlayer;
     [SerializeField] private ProjectionRenderer[] projectionRenderers;
 
-    private TeamPickerItem _currentTeam;
+    private Texture2D _currentTeam;
 
     private void OnEnable()
     {
@@ -20,7 +20,7 @@ public class ProjectionController : MonoBehaviour
 
     private void OnDestroy()
     {
-        StaticCustomSettings.ReleaseTeam(_currentTeam);
+        PlayerCustomSettings.ReleaseTeam(_currentTeam);
     }
 
     private void Awake()
@@ -31,8 +31,8 @@ public class ProjectionController : MonoBehaviour
             projectionRenderer.Projection.TransparencyType = TransparencyType.Blend;
         }
 
-        _currentTeam = !isPlayer ? StaticCustomSettings.GetRandomTeam() : StaticCustomSettings.CurrentTeam;
-        UpdateProjection(_currentTeam.Texture);
+        _currentTeam = !isPlayer ? PlayerCustomSettings.GetRandomTeam() : PlayerCustomSettings.CurrentTeam;
+        UpdateProjection(_currentTeam);
     }
 
     private void Update()
@@ -43,10 +43,10 @@ public class ProjectionController : MonoBehaviour
         }
     }
 
-    private void OnTeamPicked(TeamPickerItem teamPickerItem)
+    private void OnTeamPicked(Texture2D texture)
     {
-        _currentTeam = teamPickerItem;
-        UpdateProjection(teamPickerItem.Texture);
+        _currentTeam = texture;
+        UpdateProjection(texture);
     }
 
     private void UpdateProjection(Texture2D texture)

@@ -21,7 +21,7 @@ public class ColorPicker : MonoBehaviour
     public void PickColor(float hue)
     {
         var color = Color.HSVToRGB(hue, saturation, value);
-        StaticCustomSettings.CurrentColor = color;
+        PlayerCustomSettings.CurrentColor = color;
         OnColorPicked?.Invoke(color);
     }
 }

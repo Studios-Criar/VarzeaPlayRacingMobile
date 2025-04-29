@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using Networking;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,21 +8,20 @@ public class TeamPicker : MonoBehaviour
     [SerializeField] private HorizontalOrVerticalLayoutGroup layoutGroup;
     [SerializeField] private TeamPickerItem teamPickerItemPrefab;
     [SerializeField] private UnityEvent teamPickerItemEvents;
+    [SerializeField] private TextureDownloader textureDownloader;
     
-    public static event System.Action<TeamPickerItem> OnTeamPicked;
-    
-    private List<TeamPickerItem> _teamPickerItems = new();
+    public static event System.Action<Texture2D> OnTeamPicked;
     
     private void OnEnable()
     {
         InstantiateTeams();
-        TextureDownloader.Instance.OnTexturesLoaded += UpdateUI;
+        textureDownloader.OnTexturesLoaded += UpdateUI;
     }
 
     private void OnDisable()
     {
         DestroyTeams();
-        TextureDownloader.Instance.OnTexturesLoaded -= UpdateUI;
+        textureDownloader.OnTexturesLoaded -= UpdateUI;
     }
 
     private void UpdateUI()
@@ -37,17 +34,16 @@ public class TeamPicker : MonoBehaviour
     {
         var counter = 0;
         
-        foreach (var t in TextureDownloader.Instance.Textures)
+        foreach (var t in textureDownloader.Textures)
         {
             var item = Instantiate(teamPickerItemPrefab, layoutGroup.transform);
             item.SetUp(() =>
             {
-                PickTeam(item);
+                PickTeam(t);
                 teamPickerItemEvents?.Invoke();
             }, t);
-
-            _teamPickerItems.Add(item);
-            if (counter == 0) StaticCustomSettings.CurrentTeam = item;
+            
+            if (counter == 0) PlayerCustomSettings.SetCurrentTeam(t, textureDownloader.Textures);
             counter++;
         }
     }
@@ -58,14 +54,12 @@ public class TeamPicker : MonoBehaviour
         {
             Destroy(t.gameObject);
         }
-        
-        _teamPickerItems.Clear();
     }
 
-    private void PickTeam(TeamPickerItem teamPickerItem)
+    private void PickTeam(Texture2D texture)
     {
-        StaticCustomSettings.CurrentTeam = teamPickerItem;
-        OnTeamPicked?.Invoke(StaticCustomSettings.CurrentTeam);
-        StaticCustomSettings.AvailableTeams = _teamPickerItems.Where(t => t != StaticCustomSettings.CurrentTeam).ToList();
+        PlayerCustomSettings.SetCurrentTeam(texture, textureDownloader.Textures);
+        // StaticCustomSettings.AvailableTeams = TextureDownloader.Instance.Textures.Where(t => t != StaticCustomSettings.CurrentTeam).ToList();
+        OnTeamPicked?.Invoke(PlayerCustomSettings.CurrentTeam);
     }
 }

@@ -33,6 +33,6 @@ public class SetColor : MonoBehaviour
         }
         
         _meshRenderer.materials[materialIndex] = new Material(_meshRenderer.materials[materialIndex]);
-        SetUp(StaticCustomSettings.CurrentColor);
+        SetUp(PlayerCustomSettings.CurrentColor);
     }
 }

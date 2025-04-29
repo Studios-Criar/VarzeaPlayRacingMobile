@@ -11,14 +11,17 @@ namespace Networking
     [RequireComponent(typeof(NetworkingManager))]
     public class TextureDownloader : MonoBehaviour
     {
-        [SerializeField] private string baseUrl = "https://varzeaplay.com.br/resources/games/racing/teams/";
-    
-        public static TextureDownloader Instance { get; private set; }
+        [SerializeField, Tooltip("Texture directory URL")]
+        private string baseUrl;
+        
+        [SerializeField, Tooltip("This key must be unique. No other texture downloader should have the same key")]
+        private string key;
+        
         public List<Texture2D> Textures => new(_textures.Values);
         public event Action OnTexturesLoaded;
         
-        private static string TextureCacheDirectoryPath => Path.Combine(Application.persistentDataPath, "Cache");
-        private static string AssetsFilePath => Path.Combine(Application.persistentDataPath, "assets.json");
+        private string TextureCacheDirectoryPath => Path.Combine(Application.persistentDataPath, "Cache", key);
+        private string AssetsFilePath => Path.Combine(TextureCacheDirectoryPath, $"{key} Assets.json");
 
         private Dictionary<Uri, Texture2D> _textures;
         private Dictionary<Uri, CachedTexture> _textureCache;
@@ -27,15 +30,6 @@ namespace Networking
     
         private void Awake()
         {
-            if (Instance && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-
             // Debug.Log($"Assets path: {AssetsPath}");
             Directory.CreateDirectory(TextureCacheDirectoryPath);
 
@@ -140,8 +134,11 @@ namespace Networking
             }
             
             var data = await File.ReadAllBytesAsync(cachedTexture.path);
-            var localTexture = new Texture2D(1, 1);
-            localTexture.name = Path.GetFileNameWithoutExtension(uri.LocalPath);
+            
+            var localTexture = new Texture2D(1, 1)
+            {
+                name = Path.GetFileNameWithoutExtension(uri.LocalPath)
+            };
 
             if (localTexture.LoadImage(data, false)) return localTexture;
             
