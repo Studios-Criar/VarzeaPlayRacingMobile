@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7763639509526298639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8275195450110802458}
+  - component: {fileID: 439614154706713290}
+  - component: {fileID: 5812796571065158410}
+  - component: {fileID: 6428369124783085294}
+  - component: {fileID: 9148981225385942012}
+  m_Layer: 0
+  m_Name: SponsorTextureDownloader (Fence)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8275195450110802458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763639509526298639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439614154706713290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763639509526298639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795bded6a5a17704d9d3377878df0b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5812796571065158410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763639509526298639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a8c89080083a749b0ccbdbef34326b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseUrl: https://varzeaplay.com.br/resources/games/racing/sponsors/fence/
+  key: Sponsors Fence
+--- !u!114 &6428369124783085294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763639509526298639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7179b254172ddca48887b5a2787c61b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 68d92d43c0d38f84992fac28864018fb, type: 2}
+  - {fileID: 2100000, guid: 3f2cf6b29eaa6d545baca06d3b083cbd, type: 2}
+  - {fileID: 2100000, guid: 9ee3f8cdc3c7c6446962c2d2c438c360, type: 2}
+  textureDownloader: {fileID: 5812796571065158410}
+  updateTime: 30
+--- !u!114 &9148981225385942012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7763639509526298639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e942328c3b338e649bb78eeaeae06d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Sponsors Fence

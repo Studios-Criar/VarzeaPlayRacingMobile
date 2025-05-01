@@ -28,8 +28,10 @@ namespace Networking
 
         private NetworkingManager _networkingManager;
     
-        private void Awake()
+        private void Start()
         {
+            _networkingManager = GetComponent<NetworkingManager>();
+            
             // Debug.Log($"Assets path: {AssetsPath}");
             Directory.CreateDirectory(TextureCacheDirectoryPath);
 
@@ -38,30 +40,36 @@ namespace Networking
                 var content = File.ReadAllText(AssetsFilePath);
                 _textureCache = JsonConvert.DeserializeObject<Dictionary<Uri, CachedTexture>>(content);
             }
-            catch (Exception e)
+            catch (FileNotFoundException)
             {
-                Debug.LogException(e);
+                Debug.LogWarning("Texture cache file not found");
                 _textureCache = new Dictionary<Uri, CachedTexture>();
             }
+            catch (Exception e)
+            {
+                OverlayCanvasManager.Instance.Open($"An error occurred trying to read from cache: {e.Message}", true, Load);
+                _textureCache = new Dictionary<Uri, CachedTexture>();
+                Debug.LogException(e);
+                return;
+            }
             
-            _networkingManager = GetComponent<NetworkingManager>();
             Load();
         }
 
         [ContextMenu("Load")]
         public async void Load()
         {
+            OverlayCanvasManager.Instance.Open("Checking internet connection...", false);
+            
             var request = await _networkingManager.Get("https://google.com", null);
             
             if (request.error == null)
             {
-                Debug.Log("Connected to internet");
                 LoadTexturesOnline();
                 return;
             }
             
-            Debug.LogWarning("No internet connection");
-            LoadTexturesOffline();
+            OverlayCanvasManager.Instance.Open("No internet connection. Using cache.", true, LoadTexturesOffline);
         }
 
         private async Task<List<Uri>> ListDirectory(Uri url)
@@ -152,10 +160,14 @@ namespace Networking
             
             foreach (var uri in _textureCache.Keys)
             {
-                _textures[uri] = await LoadTextureFromCache(uri);
+                var textureName = Path.GetFileNameWithoutExtension(uri.LocalPath);
+                OverlayCanvasManager.Instance.Open($"Loading texture from cache: {textureName}", false);
+                var texture = await LoadTextureFromCache(uri);
+                if (texture) _textures[uri] = texture;
             }
             
             OnTexturesLoaded?.Invoke();
+            OverlayCanvasManager.Instance.Close();
         }
 
         private async void LoadTexturesOnline()
@@ -170,13 +182,16 @@ namespace Networking
             }
             catch (Exception e)
             {
+                OverlayCanvasManager.Instance.Open("Failed to retrieve textures online. Using cache.", true, LoadTexturesOffline);
                 Debug.LogException(e);
-                LoadTexturesOffline();
                 return;
             }
         
             foreach (var uri in filesList)
             {
+                var textureName = Path.GetFileNameWithoutExtension(uri.LocalPath);
+                OverlayCanvasManager.Instance.Open($"Downloading texture: {textureName}", false);
+                
                 Texture2D remoteTexture;
 
                 try
@@ -185,6 +200,7 @@ namespace Networking
                 }
                 catch (Exception e)
                 {
+                    OverlayCanvasManager.Instance.Open($"Error: {e.Message}");
                     Debug.LogException(e);
                     continue;
                 }
@@ -197,13 +213,14 @@ namespace Networking
                 }
             
                 _textures[uri] = remoteTexture;
-                remoteTexture.name = Path.GetFileNameWithoutExtension(uri.LocalPath);
+                remoteTexture.name = textureName;
                 var path = Path.Combine(TextureCacheDirectoryPath, Path.GetFileName(uri.LocalPath));
                 await File.WriteAllBytesAsync(path, remoteTexture.EncodeToPNG());
             }
 
             OnTexturesLoaded?.Invoke();
             await File.WriteAllTextAsync(AssetsFilePath, JsonConvert.SerializeObject(_textureCache, Formatting.Indented));
+            OverlayCanvasManager.Instance.Close();
         }
     }
 }

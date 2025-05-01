@@ -165,7 +165,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.ALIyerEdon.RacingGame231
+    Android: br.com.CriarGames.VarzeaPlayRacing
     Standalone: com.ALIyerEdon.Racing-Game-Template
   buildNumber:
     Standalone: 0
@@ -175,7 +175,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 29
-  AndroidTargetSdkVersion: 35
+  AndroidTargetSdkVersion: 34
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -983,7 +983,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 0
   windowsGamepadBackendHint: 0
   cloudProjectId: b77a9176-636e-40f3-a0ba-0271d5f29097
   framebufferDepthMemorylessMode: 0

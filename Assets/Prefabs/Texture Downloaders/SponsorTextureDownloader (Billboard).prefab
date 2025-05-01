@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7056580860993352221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1360975660818112343}
+  - component: {fileID: 787250233000444016}
+  - component: {fileID: 8970181643637177042}
+  - component: {fileID: 3154417773024230664}
+  - component: {fileID: 7912612306858473017}
+  m_Layer: 0
+  m_Name: SponsorTextureDownloader (Billboard)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1360975660818112343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056580860993352221}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787250233000444016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056580860993352221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795bded6a5a17704d9d3377878df0b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8970181643637177042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056580860993352221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a8c89080083a749b0ccbdbef34326b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseUrl: https://varzeaplay.com.br/resources/games/racing/sponsors/billboard/
+  key: Sponsors Billboard
+--- !u!114 &3154417773024230664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056580860993352221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7179b254172ddca48887b5a2787c61b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 00f0d52c2af509642a369635ec68fcd2, type: 2}
+  - {fileID: 2100000, guid: 3cdd7665cb824e44a9b1f7ff09a9d453, type: 2}
+  - {fileID: 2100000, guid: ba601fb3184810e439ad8a1486ef25f4, type: 2}
+  textureDownloader: {fileID: 8970181643637177042}
+  updateTime: 30
+--- !u!114 &7912612306858473017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056580860993352221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e942328c3b338e649bb78eeaeae06d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: Sponsors Billboard

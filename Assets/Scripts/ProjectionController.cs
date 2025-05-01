@@ -59,8 +59,7 @@ public class ProjectionController : MonoBehaviour
             projection.albedo.Color = Color.white;
 
             projectionRenderer.ChangeProjection();
-            projectionRenderer.UpdateProjection();
-            projectionRenderer.UpdateProperties();
+            // projectionRenderer.UpdateProperties();
         }
     }
 }

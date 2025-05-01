@@ -17,7 +17,7 @@ public static class PlayerCustomSettings
     }
 
     private static Color _currentColor;
-    private static List<Texture2D> _availableTeams;
+    private static List<Texture2D> _availableTeams = new();
 
     public static void SetCurrentTeam(Texture2D team, IList<Texture2D> textures)
     {
@@ -28,6 +28,7 @@ public static class PlayerCustomSettings
     
     public static Texture2D GetRandomTeam()
     {
+        if (_availableTeams.Count == 0) return null;
         var pickedTeam = _availableTeams[Random.Range(0, _availableTeams.Count)];
         // Debug.Log($"Reserving team {pickedTeam.name}");
         _availableTeams.Remove(pickedTeam);
