@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -73,7 +74,7 @@ namespace Networking
             OverlayCanvasManager.Instance.Open("No internet connection. Using cache.", true, LoadTexturesOffline);
         }
 
-        private async Task<List<Uri>> ListDirectory(Uri url)
+        private async Task<List<Uri>> ListDirectory(Uri url, string[] extensions = null)
         {
             var request = await _networkingManager.Get(url, null);
 
@@ -81,8 +82,8 @@ namespace Networking
             {
                 throw new Exception(request.error);
             }
-        
-            return NetworkingManager.ParseApacheDirectoryIndex(url, request.downloadHandler.text);
+            
+            return NetworkingManager.ParseApacheDirectoryIndex(url, request.downloadHandler.text, extensions);
         }
     
         private async Task<Texture2D> DownloadTexture(Uri uri, bool useCache = true)
@@ -121,7 +122,7 @@ namespace Networking
 
         private void SaveTextureToCache(Uri uri, string etag)
         {
-            var path = Path.Combine(TextureCacheDirectoryPath, Path.GetFileName(uri.LocalPath));
+            var path = GetTexturePath(uri);
         
             _textureCache[uri] = new CachedTexture
             {
@@ -154,6 +155,25 @@ namespace Networking
             Debug.LogError($"Could not load {uri}");
             return null;
         }
+        
+        private void ClearCache(IList<Uri> fileList)
+        {
+            var deleteList = _textureCache.Where(f => !fileList.Contains(f.Key)).ToList();
+            
+            foreach (var (uri, cachedTexture) in deleteList)
+            {
+                try
+                {
+                    Debug.Log($"Deleting {cachedTexture.name} ({uri})");
+                    File.Delete(cachedTexture.path);
+                    _textureCache.Remove(uri);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                }
+            }
+        }
 
         private async void LoadTexturesOffline()
         {
@@ -175,11 +195,13 @@ namespace Networking
         {
             _textures = new Dictionary<Uri, Texture2D>();
             
-            List<Uri> filesList;
+            List<Uri> fileList;
 
             try
             {
-                filesList = await ListDirectory(new Uri(baseUrl));
+                // var extensions = new[] { ".png", ".jpg", ".jpeg" };
+                // fileList = await ListDirectory(new Uri(baseUrl), extensions);
+                fileList = await ListDirectory(new Uri(baseUrl));
             }
             catch (Exception e)
             {
@@ -187,8 +209,10 @@ namespace Networking
                 Debug.LogException(e);
                 return;
             }
+
+            ClearCache(fileList);
         
-            foreach (var uri in filesList)
+            foreach (var uri in fileList)
             {
                 var textureName = Path.GetFileNameWithoutExtension(uri.LocalPath);
                 OverlayCanvasManager.Instance.Open($"Downloading texture: {textureName}", false);
@@ -215,13 +239,19 @@ namespace Networking
             
                 _textures[uri] = remoteTexture;
                 remoteTexture.name = textureName;
-                var path = Path.Combine(TextureCacheDirectoryPath, Path.GetFileName(uri.LocalPath));
+                var path = GetTexturePath(uri);
                 await File.WriteAllBytesAsync(path, remoteTexture.EncodeToPNG());
             }
 
             OnTexturesLoaded?.Invoke();
             await File.WriteAllTextAsync(AssetsFilePath, JsonConvert.SerializeObject(_textureCache, Formatting.Indented));
             OverlayCanvasManager.Instance.Close();
+        }
+        
+        private string GetTexturePath(Uri uri)
+        {
+            var path = Path.Combine(TextureCacheDirectoryPath, Path.GetFileName(uri.LocalPath));
+            return Path.ChangeExtension(path, "png");
         }
     }
 }

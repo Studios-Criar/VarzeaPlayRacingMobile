@@ -49,7 +49,7 @@ public class TeamPicker : MonoBehaviour
     private void UpdateTextures()
     {
         var allTextures = textureDownloader.Textures;
-        var teamTextures = allTextures.Where(t => !t.name.Contains(_carTextureEmptyFormatString)).ToList();
+        var teamTextures = allTextures.Where(t => !t.name.EndsWith(_carTextureEmptyFormatString, StringComparison.OrdinalIgnoreCase)).ToList();
 
         foreach (var t in teamTextures)
         {

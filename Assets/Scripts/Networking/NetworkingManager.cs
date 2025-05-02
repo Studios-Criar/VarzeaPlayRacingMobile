@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -34,7 +36,7 @@ namespace Networking
             return tcs.Task;
         }
 
-        public static List<Uri> ParseApacheDirectoryIndex(Uri baseUrl, string htmlContent)
+        public static List<Uri> ParseApacheDirectoryIndex(Uri baseUrl, string htmlContent, string[] extensions = null)
         {
             var list = new List<Uri>();
 
@@ -55,7 +57,13 @@ namespace Networking
                 if (isNotFile || href.EndsWith("/")) continue;
 
                 var filename = href.Split("/")[^1];
-            
+
+                if (extensions != null)
+                {
+                    var fileExtension = Path.GetExtension(filename);
+                    if (string.IsNullOrEmpty(fileExtension) || !extensions.Contains(fileExtension)) continue;
+                }
+
                 // Debug.Log(filename);
 
                 var uri = new Uri(baseUrl, Uri.EscapeDataString(filename));
