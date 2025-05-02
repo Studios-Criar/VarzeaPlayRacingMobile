@@ -15,7 +15,7 @@ public class ColorPicker : MonoBehaviour
     {
         var hue = randomColor ? Random.Range(0f, 1f) : initialHue;
         PickColor(hue);
-        slider.value = hue;
+        slider.SetValueWithoutNotify(hue);
     }
 
     public void PickColor(float hue)

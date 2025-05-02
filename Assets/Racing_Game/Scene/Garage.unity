@@ -5052,7 +5052,7 @@ RectTransform:
   m_Father: {fileID: 136843183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5703,8 +5703,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1222981954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 45, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10688,7 +10688,6 @@ MonoBehaviour:
   Price: {fileID: 2138522253}
   noEnoughScores: {fileID: 1130332949}
   purchaseUI: {fileID: 932234999}
-  colorPicker: {fileID: 1172875050}
   TotalScores: {fileID: 2028993062}
   ID: 0
   carPriceText: {fileID: 1232759314}
@@ -11901,7 +11900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1172875051
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14597,7 +14596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 85}
+  m_AnchoredPosition: {x: 0, y: 25}
   m_SizeDelta: {x: -700, y: 82.0297}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1451763292
@@ -16589,7 +16588,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -560, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1640700284
 MonoBehaviour:

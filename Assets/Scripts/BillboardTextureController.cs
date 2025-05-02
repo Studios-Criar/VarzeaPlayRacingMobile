@@ -31,7 +31,6 @@ public class BillboardTextureController : MonoBehaviour
         {
             var texture = GetRandomTexture();
             m.mainTexture = texture;
-            // if (m.GetTexture(EmissionMapShaderNameId) == null) continue;
             m.SetTexture(EmissionMapShaderNameId, texture);
         }
     }

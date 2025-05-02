@@ -20,7 +20,7 @@ public class ProjectionController : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerCustomSettings.ReleaseTeam(_currentTeam);
+        PlayerCustomSettings.ReleaseTexture(_currentTeam);
     }
 
     private void Awake()
@@ -31,7 +31,7 @@ public class ProjectionController : MonoBehaviour
             projectionRenderer.Projection.TransparencyType = TransparencyType.Blend;
         }
 
-        _currentTeam = !isPlayer ? PlayerCustomSettings.GetRandomTeam() : PlayerCustomSettings.CurrentTeam;
+        _currentTeam = !isPlayer ? PlayerCustomSettings.GetRandomTexture() : PlayerCustomSettings.CurrentTexture;
         UpdateProjection(_currentTeam);
     }
 

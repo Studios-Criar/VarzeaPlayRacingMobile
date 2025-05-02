@@ -17,12 +17,13 @@ namespace Networking
         [SerializeField, Tooltip("This key must be unique. No other texture downloader should have the same key")]
         private string key;
         
-        public List<Texture2D> Textures => new(_textures.Values);
-        public event Action OnTexturesLoaded;
-        
         private string TextureCacheDirectoryPath => Path.Combine(Application.persistentDataPath, "Cache", key);
         private string AssetsFilePath => Path.Combine(TextureCacheDirectoryPath, $"{key} Assets.json");
 
+        public event Action OnTexturesLoaded;
+        
+        public List<Texture2D> Textures => new(_textures.Values);
+        
         private Dictionary<Uri, Texture2D> _textures;
         private Dictionary<Uri, CachedTexture> _textureCache;
 

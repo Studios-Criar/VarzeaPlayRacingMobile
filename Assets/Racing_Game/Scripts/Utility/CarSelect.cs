@@ -26,7 +26,7 @@ namespace ALIyerEdon
 		// Lock Icon,Shop window,Buy button
 		public GameObject lockIcon, buyButton, Price, noEnoughScores;
 		public GameObject purchaseUI;
-		public GameObject colorPicker;
+		// public GameObject colorPicker;
 
 		// Display total scores
 		public Text TotalScores;
@@ -58,10 +58,10 @@ namespace ALIyerEdon
 			// Instantiate last selected car by saved ID
 			Instantiate(cars[ID], spawnPoint.position, spawnPoint.rotation);
 
-			if (FindObjectOfType<Car_Color>())
-				colorPicker.SetActive(true);
-			else
-				colorPicker.SetActive(false);
+			// if (FindObjectOfType<Car_Color>())
+			// 	colorPicker.SetActive(true);
+			// else
+			// 	colorPicker.SetActive(false);
 
 			// Enable or disable buy , lock and car price displays
 			if (PlayerPrefs.GetInt("Car" + ID.ToString()) == 3)
@@ -124,10 +124,10 @@ namespace ALIyerEdon
 
 			carPriceText.text = carPrices[ID].ToString() + " $";
 
-			if (FindObjectOfType<Car_Color>())
-				colorPicker.SetActive(true);
-			else
-				colorPicker.SetActive(false);
+			// if (FindObjectOfType<Car_Color>())
+			// 	colorPicker.SetActive(true);
+			// else
+			// 	colorPicker.SetActive(false);
 		}
 		// Public function for PrevCar select button in menu
 		public void PrevCar()
@@ -161,10 +161,10 @@ namespace ALIyerEdon
 
 			carPriceText.text = carPrices[ID].ToString() + " $";
 
-			if (FindObjectOfType<Car_Color>())
-				colorPicker.SetActive(true);
-			else
-				colorPicker.SetActive(false);
+			// if (FindObjectOfType<Car_Color>())
+			// 	colorPicker.SetActive(true);
+			// else
+			// 	colorPicker.SetActive(false);
 		}
 
 		public void Buy_CurrentCar()

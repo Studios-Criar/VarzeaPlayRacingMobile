@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3010497751318335210
 Transform:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 125516
+  instanceID: 104876
 --- !u!1 &669583962253366095
 GameObject:
   m_ObjectHideFlags: 0
@@ -20261,7 +20261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8169946131989645855
 Transform:
   m_ObjectHideFlags: 0
@@ -20310,7 +20310,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 125542
+  instanceID: 104902
 --- !u!1 &2023179301197106405
 GameObject:
   m_ObjectHideFlags: 0
@@ -27045,7 +27045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7524262101620859538
 Transform:
   m_ObjectHideFlags: 0
@@ -27094,7 +27094,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 125266
+  instanceID: 104628
 --- !u!1 &4831357803466945468
 GameObject:
   m_ObjectHideFlags: 0
@@ -41947,7 +41947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1576087407837578118
 Transform:
   m_ObjectHideFlags: 0
@@ -41996,7 +41996,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 125564
+  instanceID: 104924
 --- !u!1 &6858788955961226220
 GameObject:
   m_ObjectHideFlags: 0
@@ -42099,7 +42099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6212186612478136106
 Transform:
   m_ObjectHideFlags: 0
@@ -42148,7 +42148,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 125368
+  instanceID: 104730
 --- !u!1 &7788247876531282514
 GameObject:
   m_ObjectHideFlags: 0
@@ -43110,6 +43110,7 @@ GameObject:
   - component: {fileID: 8937758005598608873}
   - component: {fileID: 2206925730350222328}
   - component: {fileID: 3313198358480543499}
+  - component: {fileID: 2686617253206367945}
   m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
@@ -43220,7 +43221,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8960879506329602483}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
   m_Name: 
@@ -43231,6 +43232,20 @@ MonoBehaviour:
   - {fileID: 6265539451306426244}
   - {fileID: 47249622313328883}
   - {fileID: 5486841036995892851}
+--- !u!114 &2686617253206367945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960879506329602483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d3e0c0198c5434895cf8fd8ae8ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  materialIndex: 0
 --- !u!1 &9049721561292226623
 GameObject:
   m_ObjectHideFlags: 0

@@ -19721,7 +19721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7208739032426208967
 Transform:
   m_ObjectHideFlags: 0
@@ -19770,7 +19770,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 137066
+  instanceID: 56978
 --- !u!1 &4363990708894273369
 GameObject:
   m_ObjectHideFlags: 0
@@ -31174,7 +31174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5636230189393081392
 Transform:
   m_ObjectHideFlags: 0
@@ -31223,7 +31223,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 137126
+  instanceID: 57038
 --- !u!1 &6501890565752926596
 GameObject:
   m_ObjectHideFlags: 0
@@ -31802,7 +31802,7 @@ GameObject:
   - component: {fileID: 5106071876366596160}
   - component: {fileID: 8047752363056111682}
   - component: {fileID: 2497131412043643874}
-  - component: {fileID: 2521704628894979356}
+  - component: {fileID: 9144208697910453555}
   m_Layer: 2
   m_Name: Mac_3
   m_TagString: Untagged
@@ -31944,7 +31944,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6946423302460392610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ea4b59b3d830044b21ac8305385a2f, type: 3}
   m_Name: 
@@ -31955,7 +31955,7 @@ MonoBehaviour:
   - {fileID: 298383455837588100}
   - {fileID: 4139189308083468729}
   - {fileID: 3042353446681237460}
---- !u!114 &2521704628894979356
+--- !u!114 &9144208697910453555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31964,9 +31964,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6946423302460392610}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448717ca547c4417b0f767ce2d173b1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 65d3e0c0198c5434895cf8fd8ae8ddb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   materialIndex: 2
 --- !u!1 &6964189601857310579
 GameObject:
@@ -41959,7 +41960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4996930114017641203
 Transform:
   m_ObjectHideFlags: 0
@@ -42008,7 +42009,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 137230
+  instanceID: 57142
 --- !u!1 &7881749965881188162
 GameObject:
   m_ObjectHideFlags: 0
@@ -42341,7 +42342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7589229941509708061
 Transform:
   m_ObjectHideFlags: 0
@@ -42390,7 +42391,7 @@ MonoBehaviour:
   _TilingOffset: 801
   _MaskBase: 802
   _MaskLayers: 803
-  instanceID: 136794
+  instanceID: 56706
 --- !u!1 &8461170806575793029
 GameObject:
   m_ObjectHideFlags: 0

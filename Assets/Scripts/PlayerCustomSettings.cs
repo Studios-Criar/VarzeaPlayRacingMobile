@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class PlayerCustomSettings
 {
-    public static Texture2D CurrentTeam { get; private set; }
+    public static Texture2D CurrentTexture { get; private set; }
 
     public static Color CurrentColor
     {
@@ -12,32 +12,32 @@ public static class PlayerCustomSettings
         set
         {
             _currentColor = value;
-            Debug.Log($"New current color: {value}");
+            Debug.Log($"Current color: {value}");
         }
     }
 
-    private static Color _currentColor;
-    private static List<Texture2D> _availableTeams = new();
+    private static Color _currentColor = Color.white;
+    private static List<Texture2D> _availableTextures = new();
 
-    public static void SetCurrentTeam(Texture2D team, IList<Texture2D> textures)
+    public static void SetCurrentTexture(Texture2D team, IList<Texture2D> textures)
     {
-        CurrentTeam = team;
-        _availableTeams = textures.Where(t => t != CurrentTeam).ToList();
-        Debug.Log($"New current team: {team.name}");
+        CurrentTexture = team;
+        _availableTextures = textures.Where(t => t != CurrentTexture).ToList();
+        Debug.Log($"Current texture: {team.name}");
     }
     
-    public static Texture2D GetRandomTeam()
+    public static Texture2D GetRandomTexture()
     {
-        if (_availableTeams.Count == 0) return null;
-        var pickedTeam = _availableTeams[Random.Range(0, _availableTeams.Count)];
-        // Debug.Log($"Reserving team {pickedTeam.name}");
-        _availableTeams.Remove(pickedTeam);
-        return pickedTeam;
+        if (_availableTextures.Count == 0) return null;
+        var pickedTexture = _availableTextures[Random.Range(0, _availableTextures.Count)];
+        // Debug.Log($"Reserving texture {pickedTexture.name}");
+        _availableTextures.Remove(pickedTexture);
+        return pickedTexture;
     }
 
-    public static void ReleaseTeam(Texture2D team)
+    public static void ReleaseTexture(Texture2D texture)
     {
-        // Debug.Log($"Releasing team {team.name}");
-        _availableTeams.Add(team);
+        // Debug.Log($"Releasing texture {texture.name}");
+        _availableTextures.Add(texture);
     }
 }
