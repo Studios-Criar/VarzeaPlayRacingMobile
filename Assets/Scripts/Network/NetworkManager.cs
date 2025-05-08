@@ -8,9 +8,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Util;
 
-namespace Networking
+namespace Network
 {
-    public class NetworkingManager : MonoBehaviour
+    public class NetworkManager : MonoBehaviour
     {
         public Task<UnityWebRequest> Get(string uri, Dictionary<string, string> headers)
         {
@@ -20,7 +20,7 @@ namespace Networking
         public Task<UnityWebRequest> Get(Uri uri, Dictionary<string, string> headers)
         {
             var tcs = new TaskCompletionSource<UnityWebRequest>();
-            StartCoroutine(Networking.Get(uri, headers, request => tcs.SetResult(request)));
+            StartCoroutine(Network.Get(uri, headers, request => tcs.SetResult(request)));
             return tcs.Task;
         }
     
@@ -32,7 +32,7 @@ namespace Networking
         public Task<UnityWebRequest> GetTexture(Uri uri, Dictionary<string, string> headers)
         {
             var tcs = new TaskCompletionSource<UnityWebRequest>();
-            StartCoroutine(Networking.GetTexture(uri, headers, request => tcs.SetResult(request)));
+            StartCoroutine(Network.GetTexture(uri, headers, request => tcs.SetResult(request)));
             return tcs.Task;
         }
 

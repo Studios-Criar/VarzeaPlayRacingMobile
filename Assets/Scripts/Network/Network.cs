@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
 
-namespace Networking
+namespace Network
 {
-    public static class Networking
+    public static class Network
     {
         public static IEnumerator Get(Uri uri, Dictionary<string, string> headers, Action<UnityWebRequest> onComplete)
         {

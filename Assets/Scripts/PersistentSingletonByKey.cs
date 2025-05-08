@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingletonDontDestroyOnLoad : MonoBehaviour
+public class PersistentSingletonByKey : MonoBehaviour
 {
     [SerializeField] private string key;
 
-    private static readonly Dictionary<string, SingletonDontDestroyOnLoad> Instances = new();
+    private static readonly Dictionary<string, PersistentSingletonByKey> Instances = new();
     
     private void Awake()
     {

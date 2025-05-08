@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081418830687805974}
   - component: {fileID: 7948296058531792963}
-  - component: {fileID: 5475470014921456012}
+  - component: {fileID: 582865850887334473}
   m_Layer: 0
   m_Name: TeamsTextureDownloader
   m_TagString: Untagged
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bded6a5a17704d9d3377878df0b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5475470014921456012
+--- !u!114 &582865850887334473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6248442885050324579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a8c89080083a749b0ccbdbef34326b, type: 3}
+  m_Script: {fileID: 11500000, guid: a89bf4fc2ea44fb2bd30fbbc1f044bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseUrl: https://varzeaplay.com.br/resources/games/racing/teams/

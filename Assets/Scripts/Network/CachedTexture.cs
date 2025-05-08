@@ -1,4 +1,4 @@
-namespace Networking
+namespace Network
 {
     [System.Serializable]
     public struct CachedTexture

@@ -7,9 +7,9 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Networking
+namespace Network
 {
-    [RequireComponent(typeof(NetworkingManager))]
+    [RequireComponent(typeof(NetworkManager))]
     public class TextureDownloader : MonoBehaviour
     {
         [SerializeField, Tooltip("Texture directory URL")]
@@ -28,11 +28,11 @@ namespace Networking
         private Dictionary<Uri, Texture2D> _textures;
         private Dictionary<Uri, CachedTexture> _textureCache;
 
-        private NetworkingManager _networkingManager;
+        private NetworkManager _networkManager;
     
         private void Start()
         {
-            _networkingManager = GetComponent<NetworkingManager>();
+            _networkManager = GetComponent<NetworkManager>();
             
             // Debug.Log($"Assets path: {AssetsPath}");
             Directory.CreateDirectory(TextureCacheDirectoryPath);
@@ -63,7 +63,7 @@ namespace Networking
         {
             OverlayCanvasManager.Instance.Open("Checking internet connection...", false);
             
-            var request = await _networkingManager.Get("https://google.com", null);
+            var request = await _networkManager.Get("https://google.com", null);
             
             if (request.error == null)
             {
@@ -76,14 +76,14 @@ namespace Networking
 
         private async Task<List<Uri>> ListDirectory(Uri url, string[] extensions = null)
         {
-            var request = await _networkingManager.Get(url, null);
+            var request = await _networkManager.Get(url, null);
 
             if (request.error != null)
             {
                 throw new Exception(request.error);
             }
             
-            return NetworkingManager.ParseApacheDirectoryIndex(url, request.downloadHandler.text, extensions);
+            return NetworkManager.ParseApacheDirectoryIndex(url, request.downloadHandler.text, extensions);
         }
     
         private async Task<Texture2D> DownloadTexture(Uri uri, bool useCache = true)
@@ -96,7 +96,7 @@ namespace Networking
                 // Debug.Log($"Using cache. ETag: {asset.etag}");
             }
 
-            var request = await _networkingManager.GetTexture(uri, headers);
+            var request = await _networkManager.GetTexture(uri, headers);
         
             // Debug.Log($"Response Code: {request.responseCode}");
 

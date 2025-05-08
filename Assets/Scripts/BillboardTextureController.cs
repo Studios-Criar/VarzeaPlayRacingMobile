@@ -1,4 +1,4 @@
-using Networking;
+using Network;
 using UnityEngine;
 
 public class BillboardTextureController : MonoBehaviour

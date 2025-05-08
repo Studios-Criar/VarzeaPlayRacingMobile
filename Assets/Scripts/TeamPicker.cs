@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Networking;
+using Network;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -12,6 +12,7 @@ public class TeamPicker : MonoBehaviour
     [SerializeField] private HorizontalOrVerticalLayoutGroup layoutGroup;
     [SerializeField] private TeamPickerItem teamPickerItemPrefab;
     [SerializeField] private UnityEvent teamPickerItemEvents;
+    [SerializeField] private bool useTextureDownloaderSingleton;
     [SerializeField] private TextureDownloader textureDownloader;
 
     public static event Action<Texture2D> OnTeamPicked;
@@ -26,6 +27,8 @@ public class TeamPicker : MonoBehaviour
     private void Awake()
     {
         _image = GetComponent<Image>();
+        
+        if (useTextureDownloaderSingleton) textureDownloader = TextureDownloaderSingleton.Instance;
     }
     
     private void OnEnable()
