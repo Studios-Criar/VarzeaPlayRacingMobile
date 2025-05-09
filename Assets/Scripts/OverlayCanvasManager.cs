@@ -29,14 +29,20 @@ public class OverlayCanvasManager : MonoBehaviour
         confirmButton.onClick.AddListener(() => _confirmButtonAction?.Invoke());
     }
     
-    public void Open(string message, bool dismissible = true, System.Action onClose = null)
+    public void Open(string message, bool dismissible = true)
     {
-        messageText.text = message;
+        messageText.text = message.ToUpper();
         overlayCanvas.gameObject.SetActive(true);
         confirmButton.gameObject.SetActive(dismissible);
+    }
 
+    public void Open(string message, System.Action onClose)
+    {
+        Open(message);
+        
         _confirmButtonAction = () =>
         {
+            Debug.Log("Confirm");
             onClose?.Invoke();
             Close();
         };

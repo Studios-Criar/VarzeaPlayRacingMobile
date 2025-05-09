@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2081418830687805974}
   - component: {fileID: 7948296058531792963}
   - component: {fileID: 582865850887334473}
+  - component: {fileID: 1935995693753026310}
+  - component: {fileID: 8725125255010345059}
   m_Layer: 0
   m_Name: TeamsTextureDownloader
   m_TagString: Untagged
@@ -59,3 +61,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseUrl: https://varzeaplay.com.br/resources/games/racing/teams/
   key: Teams
+  loadOnStart: 1
+--- !u!114 &1935995693753026310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248442885050324579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfca78fe662e44c0b7e7db81d5d4eb3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8725125255010345059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248442885050324579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f62d3e923c447084904337445bb3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

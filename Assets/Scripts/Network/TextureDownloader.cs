@@ -17,11 +17,32 @@ namespace Network
         
         [SerializeField, Tooltip("This key must be unique. No other texture downloader should have the same key")]
         private string key;
+
+        [SerializeField] private bool loadOnStart = true;
         
         private string TextureCacheDirectoryPath => Path.Combine(Application.persistentDataPath, "Cache", key);
         private string AssetsFilePath => Path.Combine(TextureCacheDirectoryPath, $"{key} Assets.json");
 
+        public event Action<string> OnLog;
+        public event Action<Error> OnError;
         public event Action OnTexturesLoaded;
+
+        public enum ErrorType
+        {
+            ListingFailed,
+            CacheFileError,
+            DownloadFailed,
+            NetworkUnavailable,
+            ReadFromCacheFailed,
+            CachedTextureNotFound
+        }
+
+        public struct Error
+        {
+            public string Message;
+            public ErrorType ErrorType;
+            public Exception Exception;
+        }
         
         public List<Texture2D> Textures => new(_textures.Values);
         
@@ -44,24 +65,30 @@ namespace Network
             }
             catch (FileNotFoundException)
             {
-                Debug.LogWarning("Texture cache file not found");
+                OnLog?.Invoke("Texture cache file not found");
                 _textureCache = new Dictionary<Uri, CachedTexture>();
             }
             catch (Exception e)
             {
-                OverlayCanvasManager.Instance.Open($"An error occurred trying to read from cache: {e.Message}", true, Load);
+                // OverlayCanvasManager.Instance.Open($"An error occurred trying to read from cache: {e.Message}", true, Load);
+                OnError?.Invoke(new Error
+                {
+                    Message = $"An error occurred trying to read the texture cache file: {AssetsFilePath}.",
+                    ErrorType = ErrorType.CacheFileError,
+                    Exception = e
+                });
+                
                 _textureCache = new Dictionary<Uri, CachedTexture>();
-                Debug.LogException(e);
                 return;
             }
             
-            Load();
+            if (loadOnStart) Load();
         }
 
         [ContextMenu("Load")]
-        public async void Load()
+        public async void Load(bool useCacheIfOffline = true)
         {
-            OverlayCanvasManager.Instance.Open("Checking internet connection...", false);
+            OnLog?.Invoke("Checking internet connection...");
             
             var request = await _networkManager.Get("https://google.com", null);
             
@@ -71,7 +98,14 @@ namespace Network
                 return;
             }
             
-            OverlayCanvasManager.Instance.Open("No internet connection. Using cache.", true, LoadTexturesOffline);
+            OnError?.Invoke(new Error
+            {
+                Message = "No internet connection.",
+                ErrorType = ErrorType.NetworkUnavailable,
+                Exception = null
+            });
+
+            if (useCacheIfOffline) LoadTexturesOffline();
         }
 
         private async Task<List<Uri>> ListDirectory(Uri url, string[] extensions = null)
@@ -139,7 +173,13 @@ namespace Network
         {
             if (!_textureCache.TryGetValue(uri, out var cachedTexture))
             {
-                Debug.LogError($"Could not find {uri} in cache");
+                OnError?.Invoke(new Error
+                {
+                    Message = $"Could not find {uri} in cache",
+                    ErrorType = ErrorType.CachedTextureNotFound,
+                    Exception = null
+                });
+                
                 return null;
             }
             
@@ -152,7 +192,13 @@ namespace Network
 
             if (localTexture.LoadImage(data, false)) return localTexture;
             
-            Debug.LogError($"Could not load {uri}");
+            OnError?.Invoke(new Error
+            {
+                Message = $"Could not load {uri}",
+                ErrorType = ErrorType.ReadFromCacheFailed,
+                Exception = null
+            });
+            
             return null;
         }
         
@@ -175,23 +221,22 @@ namespace Network
             }
         }
 
-        private async void LoadTexturesOffline()
+        public async void LoadTexturesOffline()
         {
             _textures = new Dictionary<Uri, Texture2D>();
             
             foreach (var uri in _textureCache.Keys)
             {
                 var textureName = Path.GetFileNameWithoutExtension(uri.LocalPath);
-                OverlayCanvasManager.Instance.Open($"Loading texture from cache: {textureName}", false);
+                OnLog?.Invoke($"Loading texture from cache: {textureName}");
                 var texture = await LoadTextureFromCache(uri);
                 if (texture) _textures[uri] = texture;
             }
             
             OnTexturesLoaded?.Invoke();
-            OverlayCanvasManager.Instance.Close();
         }
 
-        private async void LoadTexturesOnline()
+        public async void LoadTexturesOnline()
         {
             _textures = new Dictionary<Uri, Texture2D>();
             
@@ -205,8 +250,13 @@ namespace Network
             }
             catch (Exception e)
             {
-                OverlayCanvasManager.Instance.Open("Failed to retrieve textures online. Using cache.", true, LoadTexturesOffline);
-                Debug.LogException(e);
+                OnError?.Invoke(new Error
+                {
+                    Message = "Failed to retrieve list of textures online.",
+                    ErrorType = ErrorType.ListingFailed,
+                    Exception = e
+                });
+                
                 return;
             }
 
@@ -215,7 +265,7 @@ namespace Network
             foreach (var uri in fileList)
             {
                 var textureName = Path.GetFileNameWithoutExtension(uri.LocalPath);
-                OverlayCanvasManager.Instance.Open($"Downloading texture: {textureName}", false);
+                OnLog?.Invoke($"Downloading texture: {textureName}");
                 
                 Texture2D remoteTexture;
 
@@ -225,8 +275,13 @@ namespace Network
                 }
                 catch (Exception e)
                 {
-                    OverlayCanvasManager.Instance.Open($"Error: {e.Message}");
-                    Debug.LogException(e);
+                    OnError?.Invoke(new Error
+                    {
+                        Message = $"Failed to download texture: {uri}.",
+                        ErrorType = ErrorType.DownloadFailed,
+                        Exception = e
+                    });
+                    
                     continue;
                 }
 
@@ -245,7 +300,6 @@ namespace Network
 
             OnTexturesLoaded?.Invoke();
             await File.WriteAllTextAsync(AssetsFilePath, JsonConvert.SerializeObject(_textureCache, Formatting.Indented));
-            OverlayCanvasManager.Instance.Close();
         }
         
         private string GetTexturePath(Uri uri)
